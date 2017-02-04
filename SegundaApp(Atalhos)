@@ -1,0 +1,33 @@
+//ATALHOS
+//F5 - Modo Debug
+//F9 - Cria Breakpoint
+//F10 - Debug Linha a Linha
+//F11 - Debug entra na função
+//CTRL +  <Espaço> - Auto Complete
+//CTRL + R - Compila e Executa
+//CTRL + B -  Só Compila
+//CTRL + I - Identação
+
+
+#include <iostream>
+
+//using namespace std
+
+int maximo (int x, int y);
+
+int main ()
+{
+    int a = 10;
+    int b = 20;
+    int c = maximo(a, b);
+            std::cout << "O maior entre " << a << " e " << b << " =  " << c << '\n';
+    return 0;
+}
+
+int maximo (int x, int y)
+{
+    if (x > y)
+        return x;
+    else
+        return y;
+}
