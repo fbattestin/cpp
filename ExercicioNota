@@ -1,0 +1,38 @@
+#include <iostream>
+
+//using namespace std;
+
+
+int calculoDeNota (float x, float y)
+{
+    return (x + y)/2;
+
+}
+
+int main()
+{
+    float a;
+    float b;
+    float c;
+
+    std::cout << "Insira Nota 1: ";
+    std::cin >> a;
+    std::cout << "Insira Nota 2: ";
+    std::cin >> b;
+
+    if ((a == 0) or (a > 10) or (b == 0) or (b > 10))
+    {
+        std::cout << "Todas as Notas devem respeitar o range entre 0 e 10." << '\n' << "!!!!!Insira um valor Valido!!!!"<< '\n';
+        return 1;
+    }
+    else
+        c = calculoDeNota(a, b);
+    if (c <= 6)
+        std::cout << "Aluno REPROVADO MEDIA = " << c << '\n';
+    else
+        std::cout<< "Aluno APROVADO MEDIA =  " << c << '\n';
+
+    return 0;
+
+}
+
