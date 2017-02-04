@@ -1,0 +1,41 @@
+#include <iostream>
+
+//using namespace std;
+
+
+int minimo (int x, int y)
+{
+    if (x < y)
+        return x;
+    else
+        return y;
+
+}
+
+//funcao com operador ternario
+int maximo (int x, int y)
+{
+    return x > y ? x : y;
+ }
+
+
+int main()
+{
+    int a;
+    int b;
+
+    std::cout << "Insira Valor 1: ";
+    std::cin >> a;
+    std::cout << "Insira Valor 2: ";
+    std::cin >> b;
+
+    int c = minimo(a, b);
+    std::cout<< "O menor entre " << a << " e " << b << " =  " << c << '\n';
+
+    c = maximo(a, b);
+    std::cout<< "O maior entre " << a << " e " << b << " =  " << c << '\n';
+
+    return 0;
+
+}
+
