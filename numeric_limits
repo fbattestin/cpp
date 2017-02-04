@@ -1,0 +1,31 @@
+#include <iostream>
+#include <limits>
+
+using namespace std;
+
+//testando Variavel
+int main()
+{
+    int idade;
+    for (;;) //for infinito
+    {
+        cout<< "Digite sua idade:" ;
+        cin >> idade;
+
+        if(cin.fail())//testando entrada
+        {
+            cout << "Entrada Invalida" << '\n';
+            cin.clear();
+            cin.ignore(numeric_limits<int>::max(), '\n');
+            break;
+        }
+
+        cout << "Sua idade: " << idade << " anos " << '\n';
+    }
+
+    cout << "Digite sua idade :";
+    cin >> idade;
+
+    return 0;
+}
+
