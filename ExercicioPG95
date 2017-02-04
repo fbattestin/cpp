@@ -1,0 +1,64 @@
+#include <iostream>
+#include <limits>
+
+//using namespace std
+
+bool isCinisValid()
+{
+    if (std::cin.fail())
+    {
+        std::cout << "Entrada Invalida" << '\n';
+        std::cin.clear();
+       //std::cin.ignore(numeric_limits<int>::max(), '\n');
+        std::cin.ignore(numeric_limits<int>::max(), '\n');
+        break;
+    }
+
+}
+
+
+int main()
+{
+
+        int inicial,final,razao;
+        int continuar = 1;
+
+     while (continuar)
+        {
+        std::cout << "Digite Valor Inicial:";
+        std::cin >> inicial;
+
+        std::cout << "Digite Valor Final:";
+        std::cin >> final;
+
+        std::cout << "Digite a Razao:";
+        std::cin >> razao;
+
+        //TESTA ENTRADA
+
+       if  (final < inicial)
+           std::swap(final,inicial);
+
+       if ( razao < 0)
+           razao = -razao;
+
+       int num,result=0;
+
+       for  (num= inicial; num <= final;num = num + razao )
+        {
+
+          //inicial = inicial + razao;
+         // std::cout << num << '\n';
+
+          result = result + num;
+
+        }
+
+        std::cout << "Resultado:" << result << '\n\n';
+        std::cout << "Deseja Continuar? NAO = 0" << '\n\n';
+        std::cin >> continuar;
+    }
+    return 0;
+}
+
+
